@@ -62,4 +62,12 @@
     </plugins>
   </build>
   
+  <distributionManagement>
+    <snapshotRepository>
+        <id>sc</id>
+        <name>sc-snapshots</name>
+        <url>http://10.0.8.90:48080/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
 </project>
