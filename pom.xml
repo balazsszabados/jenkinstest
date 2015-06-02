@@ -22,4 +22,44 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+    <plugins>
+   
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.1</version>
+          <executions>
+            <execution>
+		      <goals>
+		        <goal>pmd</goal>
+		      </goals>
+		      <phase>process-classes</phase>
+		     </execution>
+		  </executions>
+		</plugin>
+		
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.12.1</version>
+		<executions>
+		  <execution>
+			<id>verify-style</id>
+			<phase>process-classes</phase>
+			<goals>
+			  <goal>check</goal>
+			</goals>
+		  </execution>
+		</executions>
+	    <configuration>
+		  <failOnViolation>false</failOnViolation>
+		  <logViolationsToConsole>true</logViolationsToConsole>
+		</configuration>
+	  </plugin>
+		  
+    </plugins>
+  </build>
+  
 </project>
